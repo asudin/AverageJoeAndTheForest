@@ -10,7 +10,7 @@ public class Score : MonoBehaviour
         _score = 0;
     }
 
-    // Each time a player hits an enemy he gets 10 score
+    //Each time a player hits an enemy he gets 10 score
     private void Update()
     {
         GetComponent<UnityEngine.UI.Text>().text = _score.ToString();

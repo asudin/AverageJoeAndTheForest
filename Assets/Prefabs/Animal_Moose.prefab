@@ -499,13 +499,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148086}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c0ce2080bb2f694ca726d35a07f0972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boundary: 50
-  _sideBoundary: 60
+  _boundary: 100
+  _sideBoundary: 100
 --- !u!114 &223672019969686853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,8 +530,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.16276371, y: 0.5071283, z: 0.37658796}
-  m_Center: {x: 0.015850972, y: 0.24643612, z: 0.07479963}
+  m_Size: {x: 0.16276371, y: 0.49122724, z: 0.37076014}
+  m_Center: {x: 0.015850972, y: 0.2543867, z: 0.07188572}
 --- !u!114 &-2046269559174767470
 MonoBehaviour:
   m_ObjectHideFlags: 0

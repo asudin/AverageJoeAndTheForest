@@ -13,14 +13,14 @@ public class SpawnManager : MonoBehaviour
     private float _spawnRange = 15f;
 
     [SerializeField, Tooltip("Spawn range from the player.")]
-    private float _spawnPos = 20f;
+    private float _spawnPosition = 20f;
 
     [Header("Enemy Animal Settings")]
     public GameObject enemyAnimal;
 
     void Start()
     {
-        // Repeating the spawn of random animals
+        //Repeating the spawn of random animals
         InvokeRepeating("SpawnRandomAnimal", _spawnDelay, _spawnInterval);
         Invoke("SpawnHorizontalAnimal", 6);
     }
@@ -29,14 +29,14 @@ public class SpawnManager : MonoBehaviour
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
 
-        // Randomly generate animal spawn index and X axis position
-        Vector3 spawnPosVertical = new Vector3(Random.Range(-_spawnRange, _spawnRange), 0, _spawnPos);
+        //Randomly generate animal spawn index and X axis position
+        Vector3 spawnPosVertical = new Vector3(Random.Range(-_spawnRange, _spawnRange), 0, _spawnPosition);
         Instantiate(animalPrefabs[animalIndex], spawnPosVertical, animalPrefabs[animalIndex].transform.rotation);
     }
 
     void SpawnHorizontalAnimal()
     {
-        // Randomly generate animal spawn index and Z axis position
+        //Randomly generate animal spawn index and Z axis position
         float randNum = Random.Range(0, 2);
         float randomStagInterval = Random.Range(5, 8);
 
@@ -49,7 +49,7 @@ public class SpawnManager : MonoBehaviour
                 Vector3 spawnPosHorizontal = new Vector3(-_spawnRange, 0, Random.Range(2, 15));
                 Instantiate(enemyAnimal, spawnPosHorizontal, Quaternion.Euler(0, 90, 0));
 
-                // continue to spawn stags in random intervals
+                //Continue to spawn stags in random intervals
                 Invoke("SpawnHorizontalAnimal", randomStagInterval);
             }
             else if (randNum == 1)
@@ -57,7 +57,7 @@ public class SpawnManager : MonoBehaviour
                 Vector3 spawnPosHorizontal = new Vector3(_spawnRange, 0, Random.Range(2, 15));
                 Instantiate(enemyAnimal, spawnPosHorizontal, Quaternion.Euler(0, -90, 0));
 
-                // continue to spawn stags in random intervals
+                //Continue to spawn stags in random intervals
                 Invoke("SpawnHorizontalAnimal", randomStagInterval);
             }
         }

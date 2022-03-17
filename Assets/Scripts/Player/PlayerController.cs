@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
     public GameManager GameManager;
+    public AudioSource footsteps;
 
     private float _horizontalInput;
     private float _verticalInput;
